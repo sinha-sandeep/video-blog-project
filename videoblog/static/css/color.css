@@ -1,0 +1,22 @@
+.vidoe{
+
+  width:40%;
+  float: right;
+  padding: 10;
+  background-color: green;
+  height: 100%;
+}
+.addvideo{
+text-decoration-color: green;
+background-color: green;
+width:100px;
+
+}
+body{
+
+background-color: yellow;
+}
+.a{
+  size:20px;
+
+}

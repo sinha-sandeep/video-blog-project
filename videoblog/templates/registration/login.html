@@ -1,0 +1,17 @@
+
+{% extends 'video/base.html' %}
+{%block title.block%}
+
+{% endblock %}
+{% block content_block %}
+
+<h2 align='center'>login first</h2>
+
+
+<form align="center" method="post">
+
+{{form.as_p}}
+{%csrf_token  %}
+  <input type="submit" name="" value="sinup">
+</form>
+{% endblock %}

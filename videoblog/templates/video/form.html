@@ -1,0 +1,18 @@
+
+{% extends 'video/base.html' %}
+{%block title.block%}
+
+{% endblock %}
+{% block content_block %}
+
+<div   class="video">
+
+
+<form align='center' method="POST"  enctype="multipart/form-data">
+  {{form.as_p}}
+  {%csrf_token%}
+ <button class="b" type="file" >UPLOAD</button>
+</form>
+</div>
+
+{% endblock %}

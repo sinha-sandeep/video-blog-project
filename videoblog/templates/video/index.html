@@ -1,0 +1,46 @@
+{% extends 'video/base.html' %}
+{%block title.block%}
+
+{% endblock %}
+{% block content_block %}
+<div class="sing">
+  <button type="button" name="button"><a href="/accounts/login">login</a></button>
+  <button type="button" name="button">  <a href="/accounts/logout">logout</a></button>
+<button type="button" name="button"><a href="/sinup">sinup</a></button>
+
+
+</div>
+<div  align='center' class="a">
+
+<button  type="button" name="button"><a href="/home">Add video</a></button>
+</div>
+<div   style="text-align: center;">
+  {% for x in  video_list%}
+  <h3>{{x.title}}</h3>
+
+  <video width="500px" controls='controls'>
+
+
+   <source src="{{x.videos.url}}" type="video/MP4">
+
+  </video>
+  <button type="button" name="button"><a href="/delete/{{x.id}}">delete</a></button>
+
+
+  {% endfor %}
+
+</div>
+<div class="Paginator">
+  {% if video_list.has_previous %}
+<button type="button" name="button"><a href="?page={{video_list.previous_page_number}}"> previous</a></button>
+
+  {%endif%}
+
+  <samp>{{video_list.number}} of {{video_list.paginator.num_pages}}</samp>
+  {% if video_list.has_next  %}
+  <button type="button" name="button"><a href="?page={{video_list.next_page_number}}">next</a></button>
+
+  {%endif%}
+
+</div>
+{% endblock %}

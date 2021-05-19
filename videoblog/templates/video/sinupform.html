@@ -1,0 +1,15 @@
+{% extends 'video/base.html' %}
+{%block title.block%}
+
+{% endblock %}
+{% block content_block %}
+
+<h2 align="center">fill the form for sinup</h2>
+  <form align='' method="post">
+{{form.as_p}}
+{% csrf_token %}
+     <input type="submit" name="" value="sinup">
+  </form>
+
+
+{% endblock %}
